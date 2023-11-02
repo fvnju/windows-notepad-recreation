@@ -1,0 +1,99 @@
+*{
+    overscroll-behavior: none;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'SF Pro';
+    color: aliceblue;
+    text-rendering: geometricPrecision;
+}
+body{
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-image: url(1-653916a518722_artwork__Cartoon_Drawing.jpg);
+    background-position: center;
+}
+header, footer{
+    background-color: rgba(0, 0, 0, 0.884);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    width: 100vw;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1%;
+}
+header *{
+    font-size: 1.02em;
+    color: aliceblue;
+}
+header nav{
+    display: flex;
+    gap: 1.4em;
+}
+main, textarea{
+    background-color: rgb(39, 39, 39);
+    height: 90vh;
+    color: aliceblue;
+    width: 100%;
+    border: none;
+    padding: 0.5%;
+}
+textarea{
+    all: initial;
+    width: 100%;
+    color: aliceblue;
+    font-family: 'Fira Code';
+    height: 90vh;
+    font-size: 1.02em;
+}
+button{
+    background: none;
+    border: none;
+    color: aliceblue;
+}
+header nav button, i{
+    cursor: pointer;
+}
+i{
+    font-size: 1.6em;
+}
+@keyframes heartbeat {
+    from {
+      transform: scale(1);
+      transform-origin: center center;
+      animation-timing-function: ease-out;
+    }
+    10% {
+      transform: scale(0.91);
+      animation-timing-function: ease-in;
+    }
+    17% {
+      transform: scale(0.98);
+      animation-timing-function: ease-out;
+    }
+    33% {
+      transform: scale(0.87);
+      animation-timing-function: ease-in;
+    }
+    45% {
+      transform: scale(1);
+      animation-timing-function: ease-out;
+    }
+  }  
+i:active, button:active{
+    animation: heartbeat 1.5s ease-in-out infinite both;
+}
+footer{
+    display: grid;
+    grid-template-columns: 70% 10% 10% 10%;
+}
+.pos, .zoom, .csmn{
+    border-right: 0.1em solid rgb(59, 59, 59);
+}
+div:not(.pos){
+    padding-left: 5%;
+}
